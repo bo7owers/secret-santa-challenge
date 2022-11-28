@@ -8,7 +8,7 @@
 
 Secret Santa is a classic Christmas game to play with your colleagues at work. In this challenge, flex your creative muscles by creating a Vue.js powered Secret Santa Clue site. If you're not familiar with how the game works, you can [get a detailed breakdown of the rules here](https://www.elfster.com/content/secret-santa-rules/) but don't worry too much about the complete ruleset, it's not necessary to complete the challenge.
 
-All you really need to know is that you're sharing 3 facts about yourself to hint at your identity. Most importantly, you'll do it Vue.js style. Feel free to get creative! Use various UI elements to reveal hints, throw in an image, etc.
+All you really need to know is that you're sharing 3 facts about yourself to hint at your identity. Most importantly, you'll do it Vue.js style. Feel free to get creative and go as simple or as advanced as you like. Use various UI elements to reveal hints, throw in an image, try out that new plugin you've been wanting to try, or use a component UI library of your choice.
 
 ## Example of a solution in action
 
