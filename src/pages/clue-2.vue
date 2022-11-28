@@ -32,7 +32,10 @@ const interval = setInterval(() => {
   </div>
 
   <div v-else class="text-center">
-    <UsaMap></UsaMap>
+    <div class="flex justify-center">
+      <UsaMap class="w-72"></UsaMap>
+    </div>
+
     <i class="mt-5 text-xs">(Map is a simple SVG)</i>
     <p>I've lived in 5 US states in my lifetime</p>
     <p>

@@ -10,8 +10,8 @@ const iAmCorrect = computed(() => {
 <template>
   <AppHeader>Clue #3</AppHeader>
   <div>
-    <div class="p-10">
-      <img class="max-w-full mb-[-20px] mt-[-40px]" src="vueschool_logo_two lines_white bg.png" alt="Vue School Logo" />
+    <div class="p-10 flex justify-center">
+      <img class="w-48 mb-[-20px] mt-[-40px]" src="/vueschool-logo.png" alt="Vue School Logo" />
     </div>
 
     <p class="text-center">I'm the lead instructor at Vue School.</p>
@@ -22,7 +22,7 @@ const iAmCorrect = computed(() => {
       placeholder="Who am I? (Hint: Daniel)"
     />
     <transition>
-      <div v-if="iAmCorrect" class="text-center">
+      <div v-if="iAmCorrect" class="text-center w-96">
         <p class="text-primary mt-5">You got it! It's nice to meet you! 👋</p>
         <p>
           Go checkout some awesome Vue.js Courses on <a href="https://vueschool.io/">vueschool.io</a> and
