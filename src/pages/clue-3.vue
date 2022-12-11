@@ -17,7 +17,7 @@ const correct = computed(() => {
     </select>
 
     <div class="mt-5">
-      <RouterLink v-if="correct" to="/who-am-i" class="btn btn-primary mt-3">Correct! Reveal Clue</RouterLink>
+      <p v-if="correct" class="text-green mt-3">Correct! Reveal Clue</p>
 
       <p class="text-error" v-if="answer && !correct">Wrong! Try again</p>
     </div>

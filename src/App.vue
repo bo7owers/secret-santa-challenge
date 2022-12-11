@@ -4,9 +4,9 @@
     <div class="shadow-md relative bg-white p-5 rounded-lg border-gray-100 border-[1px]">
       <RouterView></RouterView>
 
-      <h4 class="mt-10 text-gray-400 text-center text-sm">
-        This challenge brought to you by <a href="https://vueschool.io/" class="underline">Vue School</a>
-      </h4>
+		<p>Test</p>
+
+
     </div>
   </div>
 </template>
