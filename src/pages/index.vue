@@ -7,19 +7,8 @@ import { useRouter } from 'vue-router'
 
 </script>
 <template>
-  	<AppHeader>Welcome to your Secret Santa Clues!</AppHeader>
+  	<AppHeader>How well do you know me?</AppHeader>
   	<div class="text-center">
-   	<p>Index</p>
-		 <Card style="width: 25rem; margin-bottom: 2em">
-            <template #title>
-                Simple Card
-            </template>
-            <template #content>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-                quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-            </template>
-        </Card>
-
 		   <Card style="width: 25em">
             <template #header>
                 <img src="https://www.primefaces.org/wp-content/uploads/2020/02/primefacesorg-primevue-2020.png" style="height: 15rem" />
