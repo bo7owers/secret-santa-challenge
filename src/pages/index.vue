@@ -1,7 +1,5 @@
 <script setup>
-import { ref } from 'vue'
 import AppHeader from '@/components/AppHeader.vue'
-import { useRouter } from 'vue-router'
 import MyCard from '@/components/MyCard.vue'
 // const router = useRouter()
 </script>
