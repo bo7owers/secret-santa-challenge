@@ -25,7 +25,26 @@ const altText = !props.alt === undefined ? props.alt : ''
 		<p>{{ content }}</p>
    </template>
 	<template #footer v-if="btnLabel">
-		<Button :label="btnLabel" class="p-button-secondary pb-5x;" />
+		<Button :label="btnLabel" class="bg-sky-700 hover:bg-sky-900 text-white font-bold py-2 px-4 rounded w-1/3 my-class" />
    </template>
 </Card>
 </template>
+<style scoped>
+.my-class{
+	background-color: rgb(3 105 161) !important;
+	color: #fff !important;
+	font-weight: bold !important;
+	padding-inline: 1rem;
+	padding-block: 0.5rem;
+	border-radius: 12px;
+	width: 100%;
+	border: none;
+}
+.my-class:hover{
+	background-color: rgb(12 74 110) !important;
+}
+.my-class:focus{
+	/* outline-color: rgb(3 105 161) !important;*/
+	box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgb(3 105 161), 0 1px 2px 0 black !important;
+}
+</style>
