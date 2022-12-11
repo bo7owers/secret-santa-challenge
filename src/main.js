@@ -10,6 +10,7 @@ import Dialog from 'primevue/dialog'
 import Button from 'primevue/button'
 import 'primevue/resources/primevue.min.css'
 import 'primevue/resources/themes/lara-light-purple/theme.css'
+import 'primeicons/primeicons.css'
 import { createPinia } from 'pinia'
 
 const router = createRouter({

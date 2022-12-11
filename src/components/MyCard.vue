@@ -22,6 +22,10 @@ const toggle = () => {
 
 <template>
   <Dialog
+    position="center"
+    dismissableMask="true"
+    modal="true"
+    draggable="false"
     header="Header"
     v-model:visible="thisModal"
     :breakpoints="{ '960px': '75vw', '640px': '90vw' }"
@@ -90,6 +94,9 @@ const toggle = () => {
 .my-class-green:hover {
   background-color: #246045 !important;
   color: #fff !important;
+}
+.my-class-green:focus {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #42b883, 0 1px 2px 0 black !important;
 }
 </style>
 
