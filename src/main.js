@@ -2,15 +2,16 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import './base.css'
 import { createWebHistory } from 'vue-router'
-
+import PrimeVue from 'primevue/config'
 import { createRouter } from 'vue-router'
 import routes from '~pages'
-import FloatingVue from 'floating-vue'
-import 'floating-vue/dist/style.css'
-
+import Card from 'primevue/card'
+import Dialog from 'primevue/dialog'
+import 'primevue/resources/primevue.min.css'
+import 'primevue/resources/themes/lara-light-purple/theme.css'
 const router = createRouter({
   history: createWebHistory(),
   routes,
 })
 
-createApp(App).use(FloatingVue).use(router).mount('#app')
+createApp(App).use(PrimeVue).component('Dialog', Dialog).component('Card', Card).use(router).mount('#app')
