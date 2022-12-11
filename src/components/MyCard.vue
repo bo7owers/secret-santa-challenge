@@ -4,27 +4,28 @@ const props = defineProps({
 	title: {type: String, required: true},
 	subTitle: {type: String, required: false},
 	content: {type: String, required: false},
-	btnLabel: {type: String, required: false}
+	btnLabel: {type: String, required: false},
+	alt: {type:String, required: false}
 })
+const imgURL = new URL(`../assets/imgs/${props.imgSrc}`, import.meta.url).href
+const altText = !props.alt === undefined ? props.alt : ''
 </script>
 <template>
 <Card style="width: 25em">
    <template #header>
-       <img src="https://www.primefaces.org/wp-content/uploads/2020/02/primefacesorg-primevue-2020.png" style="height: 15rem" />
+       <img :src="imgURL" :alt="altText" style="height: 15rem; object-fit: cover;" />
    </template>
    <template #title>
-       Advanced Card
+      {{ title }}
    </template>
-   <template #subtitle>
-       Card subtitle
+   <template #subtitle v-if="subTitle">
+       {{ subTitle }}
    </template>
    <template #content>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-      quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+		<p>{{ content }}</p>
    </template>
 	<template #footer v-if="btnLabel">
-		<Button icon="pi pi-check" label="Save" />
-   	<Button icon="pi pi-times" label="Cancel" class="p-button-secondary" style="margin-left: .5em" />
+		<Button :label="btnLabel" class="p-button-secondary" style="padding-bottom: 5px;" />
    </template>
 </Card>
 </template>

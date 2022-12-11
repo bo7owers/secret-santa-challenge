@@ -2,34 +2,18 @@
 import { ref } from 'vue'
 import AppHeader from '@/components/AppHeader.vue'
 import { useRouter } from 'vue-router'
-
+import MyCard from '@/components/MyCard.vue'
 // const router = useRouter()
-
 </script>
 <template>
-  	<AppHeader>How well do you know me?</AppHeader>
-  	<div class="text-center">
-		   <Card style="width: 25em">
-            <template #header>
-                <img src="https://www.primefaces.org/wp-content/uploads/2020/02/primefacesorg-primevue-2020.png" style="height: 15rem" />
-            </template>
-            <template #title>
-                Advanced Card
-            </template>
-            <template #subtitle>
-                Card subtitle
-            </template>
-            <template #content>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-                quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-            </template>
-            <template #footer>
-                <Button icon="pi pi-check" label="Save" />
-                <Button icon="pi pi-times" label="Cancel" class="p-button-secondary" style="margin-left: .5em" />
-            </template>
-        </Card>
-
-			
-		<RouterLink to="/clue-2">Clue 2</RouterLink>
-	</div>
+  <AppHeader>How well do you know me?</AppHeader>
+  <div class="text-center">
+    <MyCard
+      title="First sentence"
+      imgSrc="bo7owers-gh.jpeg"
+      alt="Bo7owers Animoji"
+      content="I like dessert pizza (with pineapple)"
+      btnLabel="Check Answer"
+    />
+  </div>
 </template>
