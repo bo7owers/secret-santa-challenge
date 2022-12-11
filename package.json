@@ -11,8 +11,7 @@
     "daisyui": "^2.42.1",
     "floating-vue": "^2.0.0-beta.20",
     "primeicons": "^6.0.1",
-    "vue": "^3.2.37",
-    "vue-router": "^4.1.6"
+    "vue": "^3.2.37"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.1",
