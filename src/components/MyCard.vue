@@ -32,13 +32,13 @@ const toggle = () => {
   >
     <template #header>
       <h3 class="font-semibold text-lg">
-        Response to "<span class="italic text-green">{{ title }}</span
+        Response to "<span class="italic">{{ title }}</span
         >"
       </h3>
     </template>
     <p class="">{{ content }} <span class="font-bold text-red-900 underline">is false!</span></p>
 
-    <p class="text-blue-900 font-bold mt-3">Do not share personal information online</p>
+    <p class="mt-3">Do not share personal information online.</p>
     <template #footer>
       <Button @click="toggle" class="my-class my-class-green" :label="`Close Modal`" autofocus />
     </template>
