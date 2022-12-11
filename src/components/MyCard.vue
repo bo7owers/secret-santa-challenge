@@ -25,21 +25,22 @@ const toggle = () => {
     position="center"
     dismissableMask="true"
     modal="true"
-    draggable="false"
     header="Header"
     v-model:visible="thisModal"
     :breakpoints="{ '960px': '75vw', '640px': '90vw' }"
     :style="{ width: '50vw' }"
   >
-    <p>{{ content }}</p>
+    <template #header>
+      <h3 class="font-semibold text-lg">
+        Response to "<span class="italic text-green">{{ title }}</span
+        >"
+      </h3>
+    </template>
+    <p class="">{{ content }} <span class="font-bold text-red-900 underline">is false!</span></p>
+
+    <p class="text-blue-900 font-bold mt-3">Do not share personal information online</p>
     <template #footer>
-      <Button
-        @click="toggle"
-        class="my-class my-class-green"
-        :label="`Close ${props.modalNumber}`"
-        icon="pi pi-check"
-        autofocus
-      />
+      <Button @click="toggle" class="my-class my-class-green" :label="`Close Modal`" autofocus />
     </template>
   </Dialog>
 
@@ -48,7 +49,7 @@ const toggle = () => {
       <img :src="imgURL" :alt="altText" style="height: 15rem; object-fit: cover" class="rounded-md" />
     </template>
     <template #title>
-      {{ title }}
+      <h2>{{ title }}</h2>
     </template>
     <template #subtitle v-if="subTitle">
       {{ subTitle }}
