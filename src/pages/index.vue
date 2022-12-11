@@ -20,5 +20,12 @@ import MyCard from '@/components/MyCard.vue'
 		content="I have visited 38 countries so far"
 		btnLabel="Check Answer 2" 
 	  />
+	  <MyCard
+		title="Third sentence"
+		imgSrc="animoji.png"
+		alt="Old bo7owers animoji"
+		content="I have been inside a space rocket"
+		btnLabel="Check Answer 3"
+	  />
   </div>
 </template>
