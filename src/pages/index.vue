@@ -22,7 +22,7 @@ const { displayModal1, displayModal2, displayModal3 } = storeToRefs(store)
       modalNumber="displayModal1"
     />
     <!-- First Modal -->
-    <Dialog
+    <!-- <Dialog
       header="Header"
       v-model:visible="displayModal1"
       :breakpoints="{ '960px': '75vw', '640px': '90vw' }"
@@ -38,7 +38,7 @@ const { displayModal1, displayModal2, displayModal3 } = storeToRefs(store)
       <template #footer>
         <Button label="Close modal 1" icon="pi pi-check" @click="toggle" autofocus />
       </template>
-    </Dialog>
+    </Dialog> -->
     <MyCard
       title="Second sentence"
       imgSrc="csps-7owers.png"
@@ -48,7 +48,7 @@ const { displayModal1, displayModal2, displayModal3 } = storeToRefs(store)
       modalNumber="displayModal2"
     />
     <!-- Second Modal -->
-    <Dialog
+    <!-- <Dialog
       header="Header"
       v-model:visible="displayModal2"
       :breakpoints="{ '960px': '75vw', '640px': '90vw' }"
@@ -64,7 +64,7 @@ const { displayModal1, displayModal2, displayModal3 } = storeToRefs(store)
       <template #footer>
         <Button label="Yes" icon="pi pi-check" @click="closeBasic" autofocus />
       </template>
-    </Dialog>
+    </Dialog> -->
     <MyCard
       title="Third sentence"
       imgSrc="animoji.png"
@@ -74,7 +74,7 @@ const { displayModal1, displayModal2, displayModal3 } = storeToRefs(store)
       modalNumber="displayModal1"
     />
     <!-- Third Modal -->
-    <Dialog
+    <!-- <Dialog
       header="Header"
       v-model:visible="displayModal3"
       :breakpoints="{ '960px': '75vw', '640px': '90vw' }"
@@ -90,6 +90,6 @@ const { displayModal1, displayModal2, displayModal3 } = storeToRefs(store)
       <template #footer>
         <Button label="Yes" icon="pi pi-check" @click="closeBasic" autofocus />
       </template>
-    </Dialog>
+    </Dialog> -->
   </div>
 </template>
