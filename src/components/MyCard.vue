@@ -29,7 +29,13 @@ const toggle = () => {
   >
     <p>{{ content }}</p>
     <template #footer>
-      <Button :label="`Close ${props.modalNumber}`" icon="pi pi-check" autofocus />
+      <Button
+        @click="toggle"
+        class="my-class my-class-green"
+        :label="`Close ${props.modalNumber}`"
+        icon="pi pi-check"
+        autofocus
+      />
     </template>
   </Dialog>
 
@@ -50,15 +56,13 @@ const toggle = () => {
       <Button
         @click="toggle"
         :label="btnLabel"
-        class="bg-sky-700 hover:bg-sky-900 text-white font-bold py-2 px-4 rounded w-1/3 my-class"
+        class="bg-sky-700 hover:bg-sky-900 text-white font-bold py-2 px-4 rounded w-1/3 my-class my-class-blue"
       />
     </template>
   </Card>
 </template>
 <style scoped>
 .my-class {
-  background-color: rgb(3 105 161) !important;
-  color: #fff !important;
   font-weight: bold !important;
   padding-inline: 1rem;
   padding-block: 0.5rem;
@@ -66,12 +70,26 @@ const toggle = () => {
   width: 100%;
   border: none;
 }
-.my-class:hover {
+
+.my-class-blue {
+  background-color: rgb(3 105 161) !important;
+  color: #fff !important;
+}
+.my-class-blue:hover {
   background-color: rgb(12 74 110) !important;
 }
-.my-class:focus {
+.my-class-blue:focus {
   /* outline-color: rgb(3 105 161) !important;*/
   box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgb(3 105 161), 0 1px 2px 0 black !important;
+}
+
+.my-class-green {
+  background-color: #42b883;
+  color: #000;
+}
+.my-class-green:hover {
+  background-color: #246045 !important;
+  color: #fff !important;
 }
 </style>
 
