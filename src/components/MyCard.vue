@@ -11,9 +11,9 @@ const imgURL = new URL(`../assets/imgs/${props.imgSrc}`, import.meta.url).href
 const altText = !props.alt === undefined ? props.alt : ''
 </script>
 <template>
-<Card style="width: 25em">
+<Card class="w-64">
    <template #header>
-       <img :src="imgURL" :alt="altText" style="height: 15rem; object-fit: cover;" />
+       <img :src="imgURL" :alt="altText" style="height: 15rem; object-fit: cover;" class="rounded-md" />
    </template>
    <template #title>
       {{ title }}
@@ -25,7 +25,7 @@ const altText = !props.alt === undefined ? props.alt : ''
 		<p>{{ content }}</p>
    </template>
 	<template #footer v-if="btnLabel">
-		<Button :label="btnLabel" class="p-button-secondary" style="padding-bottom: 5px;" />
+		<Button :label="btnLabel" class="p-button-secondary pb-5x;" />
    </template>
 </Card>
 </template>

@@ -5,13 +5,20 @@ import MyCard from '@/components/MyCard.vue'
 </script>
 <template>
   <AppHeader>How well do you know me?</AppHeader>
-  <div class="text-center">
+  <div class="flex flex-row gap-5 justify-center">
     <MyCard
       title="First sentence"
       imgSrc="bo7owers-gh.jpeg"
       alt="Bo7owers Animoji"
       content="I like dessert pizza (with pineapple)"
-      btnLabel="Check Answer"
+      btnLabel="Check Answer 1"
     />
+	 <MyCard
+	 	title="Second sentence"
+		imgSrc="csps-7owers.png"
+		alt="Alternative bo7owers animoji"
+		content="I have visited 38 countries so far"
+		btnLabel="Check Answer 2" 
+	  />
   </div>
 </template>
