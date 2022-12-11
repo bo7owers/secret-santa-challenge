@@ -1,6 +1,6 @@
 <script setup>
-import { useDialogStore } from '@/store/DialogStore.js'
-import { storeToRefs } from 'pinia'
+import { ref } from 'vue'
+
 const props = defineProps({
   imgSrc: { type: String, required: false },
   title: { type: String, required: true },
@@ -13,31 +13,21 @@ const props = defineProps({
 const imgURL = new URL(`../assets/imgs/${props.imgSrc}`, import.meta.url).href
 const altText = !props.alt === undefined ? props.alt : ''
 
-// state management
-
-const store = useDialogStore()
-
-const { displayModal1, displayModal2, displayModal3 } = storeToRefs(store)
-
-const { toggleModal1, toggleModal2, toggleModal3 } = store
+const thisModal = ref(false)
 
 const toggle = () => {
-  displayModal1.value = true
+  thisModal.value === false ? (thisModal.value = true) : (thisModal.value = false)
 }
 </script>
+
 <template>
   <Dialog
     header="Header"
-    v-model:visible="displayModal1"
+    v-model:visible="thisModal"
     :breakpoints="{ '960px': '75vw', '640px': '90vw' }"
     :style="{ width: '50vw' }"
   >
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    <p>{{ content }}</p>
     <template #footer>
       <Button :label="`Close ${props.modalNumber}`" icon="pi pi-check" autofocus />
     </template>
@@ -82,5 +72,16 @@ const toggle = () => {
 .my-class:focus {
   /* outline-color: rgb(3 105 161) !important;*/
   box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgb(3 105 161), 0 1px 2px 0 black !important;
+}
+</style>
+
+<style>
+.p-dialog-mask::before {
+  content: '';
+  position: absolute;
+  background-color: #333;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.8;
 }
 </style>
