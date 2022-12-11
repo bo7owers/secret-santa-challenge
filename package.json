@@ -10,6 +10,7 @@
     "@vueuse/core": "^9.5.0",
     "daisyui": "^2.42.1",
     "floating-vue": "^2.0.0-beta.20",
+    "pinia": "^2.0.28",
     "primeicons": "^6.0.1",
     "vue": "^3.2.37",
     "vue-router": "^4.1.6"

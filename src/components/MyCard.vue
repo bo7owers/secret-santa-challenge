@@ -1,14 +1,28 @@
 <script setup>
+import { useDialogStore } from '@/stores/DialogStore'
+import { storeToRefs } from 'pinia'
 const props = defineProps({
 	imgSrc: {type: String, required: false},
 	title: {type: String, required: true},
 	subTitle: {type: String, required: false},
 	content: {type: String, required: false},
 	btnLabel: {type: String, required: false},
-	alt: {type:String, required: false}
+	alt: {type:String, required: false},
+	modalNumber: {type: String, required: true}
 })
 const imgURL = new URL(`../assets/imgs/${props.imgSrc}`, import.meta.url).href
 const altText = !props.alt === undefined ? props.alt : ''
+
+// state management
+
+const store = useDialogStore()
+
+const { displayModal1, displayModal2, displayModal3 } = storeToRefs(store)
+
+const { toggleModal1, toggleModal2, toggleModal3 } = store
+
+
+
 </script>
 <template>
 <Card class="w-64">
@@ -25,7 +39,7 @@ const altText = !props.alt === undefined ? props.alt : ''
 		<p>{{ content }}</p>
    </template>
 	<template #footer v-if="btnLabel">
-		<Button :label="btnLabel" class="bg-sky-700 hover:bg-sky-900 text-white font-bold py-2 px-4 rounded w-1/3 my-class" />
+		<Button @click="toggleModal1" :label="btnLabel" class="bg-sky-700 hover:bg-sky-900 text-white font-bold py-2 px-4 rounded w-1/3 my-class" />
    </template>
 </Card>
 </template>
